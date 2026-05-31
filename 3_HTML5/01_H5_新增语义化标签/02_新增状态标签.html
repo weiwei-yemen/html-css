@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>02_新增状态标签</title>
+    <style>
+        progress {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <span>手机电量：</span>
+    <!-- low和high设定不健康的阈值， optimum会改变原有的机制，optimum落在哪个区间该区间就会变成健康的区间-->
+    <meter max="100" min="0" value="90" low="10" high="20" optimum="90"></meter>
+    <br>
+    <span>当前进度：</span>
+    <progress max="100" value="20"></progress>
+</body>
+</html>
