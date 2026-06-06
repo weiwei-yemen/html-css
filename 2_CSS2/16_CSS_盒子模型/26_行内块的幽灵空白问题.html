@@ -1,25 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>26_行内块的幽灵空白问题</title>
     <style>
-        div {
-            width: 600px;
-            background-color: skyblue;
-            /* font-size: 0; */
-        }
-        img {
-            height: 200px;
-            /* 三种解决方案，推荐第一种 */
-            /* vertical-align: bottom; */
-            /* display: block; */
-        }
+      div {
+        width: 600px;
+        background-color: skyblue;
+        /* font-size: 0; */
+      }
+      img {
+        height: 200px;
+        /* 三种解决方案，推荐vertical-align: bottom; */
+        /* vertical-align默认是基线对齐，修改为和行盒底部对齐 */
+        /* vertical-align: bottom; */
+        /* display: block; */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <img src="../images/我的自拍.jpg" alt="悟空">
+      <img src="../images/我的自拍.jpg" alt="悟空" />
     </div>
-</body>
+  </body>
 </html>
