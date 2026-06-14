@@ -1,16 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>01_新增视频标签</title>
     <style>
-        video {
-            width: 600px;
-        }
+      video {
+        width: 600px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- muted静音 loop循环播放  preload预加载-->
-    <video src="./小电影.mp4" controls muted loop poster="./封面.png" preload="auto"></video>
-</body>
+    <!-- muted默认静音，loop循环播放，preload=auto：页面加载时就开始下载视频，preload=metadata：只预加载视频元数据
+     ，none啥都不预加载 -->
+    <video
+      src="./小电影.mp4"
+      controls
+      muted
+      loop
+      poster="./封面.png"
+      preload="auto"
+    ></video>
+  </body>
 </html>
