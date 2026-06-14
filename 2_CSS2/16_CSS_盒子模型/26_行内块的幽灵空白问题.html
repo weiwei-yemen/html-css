@@ -20,7 +20,10 @@
   </head>
   <body>
     <div>
-      <img src="../images/我的自拍.jpg" alt="悟空" />
+      <!-- 行内元素的默认对齐方式是vertical-align：baseline -->
+      <!-- 这里的div没有指定高度，有内部的行盒自动撑开，行盒的底部和div的底部是重合的 -->
+      <!-- 行盒的baseline与行盒的底部存在间隙，给下沉字符留有空间，就产生了幽灵空白问题 -->
+      <span>xxx</span><img src="../images/我的自拍.jpg" alt="悟空" />
     </div>
   </body>
 </html>

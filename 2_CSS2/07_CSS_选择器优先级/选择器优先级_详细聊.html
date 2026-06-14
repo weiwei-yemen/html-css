@@ -1,34 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>选择器优先级_详细聊</title>
     <!-- 计算权重，vscode鼠标悬停上面会显示权重值！！！！-->
     <!-- （id选择器个数，类、伪类、属性选择器个数，元素，伪元素选择器个数） -->
     <!-- 比较权重的规则，从左边开始比较，相同则下一位，不同不再继续比较 -->
     <!-- 权重相同看就近原则 -->
     <style>
-        #atguigu {
-            color: orange;
-        }
-        .container span.slogan {
-            color: red;
-        }
-        div>p>span:nth-child(1) {
-            color: green;
-        }
-        .slogan {
-            /* !important 加上这个的优先级最高，比行内都高，宇宙最强 */
-            color: purple !important;
-        }
+      #atguigu {
+        color: orange;
+      }
+      .container span.slogan {
+        color: red;
+      }
+      div > p > span:nth-child(1) {
+        color: green;
+      }
+      .slogan {
+        /* !important 加上这个的优先级最高，比行内都高，宇宙最强 */
+        color: purple !important;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <p>
-            <span class="slogan" id="atguigu" style="color: blue;">尚硅谷，让天下没有难学的技术！</span>
-            <span>欢迎同学们来学习！</span>
-        </p>
+      <p>
+        <span class="slogan" id="atguigu" style="color: blue"
+          >尚硅谷，让天下没有难学的技术！</span
+        >
+        <span>欢迎同学们来学习！</span>
+      </p>
     </div>
-</body>
+  </body>
 </html>

@@ -1,39 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>16_margin塌陷问题</title>
     <style>
-        .outer {
-            width: 400px;
-            /* height: 400px; */
-            background-color: gray;
+      .outer {
+        width: 400px;
+        /* height: 400px; */
+        background-color: gray;
 
-            /* margin塌陷:给第一个儿子的margin-top和给最后一个儿子家的margin-bottom会被父抢走。以下三种解决办法，推荐第三种 */
-            /* border: 10px solid transparent; */
-            /* padding: 10px; */
-            overflow: hidden;
-        }
-        .inner1 {
-            width: 100px;
-            height: 100px;
-            background-color: orange;
-            /* 下面这行代码是有问题的，margin塌陷问题 */
-            margin-top: 50px;
-        }
-        .inner2 {
-            width: 100px;
-            height: 100px;
-            background-color: green;
-            margin-bottom: 50px;
-        }
+        /* 什么是margin塌陷:给第一个儿子的margin-top和给最后一个儿子家的margin-bottom会被父抢走。以下三种解决办法，推荐第三种 */
+        /* border: 10px solid transparent; */
+        /* padding: 10px; */
+        overflow: hidden;
+      }
+      .inner1 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        /* 下面这行代码是有问题的，margin塌陷问题 */
+        margin-top: 50px;
+      }
+      .inner2 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin-bottom: 50px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="outer">
-        <div class="inner1">inner1</div>
-        <div class="inner2">inner2</div>
+      <div class="inner1">inner1</div>
+      <div class="inner2">inner2</div>
     </div>
     <div>我是一段测试的文字</div>
-</body>
+  </body>
 </html>
