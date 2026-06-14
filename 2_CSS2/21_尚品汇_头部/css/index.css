@@ -1,76 +1,78 @@
 /* 基础设置 */
 .container {
-    width: 1190px;
-    margin: 0 auto;
+  width: 1190px;
+  margin: 0 auto;
 }
 
 /* #region顶部导航条start */
 .topbar {
-    height: 30px;
-    background-color: #ECECEC;
+  height: 30px;
+  background-color: #ececec;
 }
 .welcome {
-    height: 30px;
-    line-height: 30px;
-    font-size: 0;
-    color: #666;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0;
+  color: #666;
 }
-.welcome span,.welcome a {
-    font-size: 12px;
+.welcome span,
+.welcome a {
+  font-size: 12px;
 }
 .welcome .hello {
-    margin-right: 28px;
+  margin-right: 28px;
 }
 .welcome .login {
-    padding-right: 10px;
-    border-right: 1px solid #666;
+  padding-right: 10px;
+  border-right: 1px solid #666;
 }
 .welcome .register {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 .topbar-nav .list {
-    height: 30px;
-    line-height: 30px;
+  height: 30px;
+  line-height: 30px;
 }
 .topbar-nav .list li {
-    float: left;
+  float: left;
 }
 .topbar-nav .list li a {
-    padding: 0 15px;
-    border-right: 1px solid #666;
+  padding: 0 15px;
+  border-right: 1px solid #666;
 }
 .topbar-nav .list li:first-child a {
-    padding-left: 0;
+  padding-left: 0;
 }
 .topbar-nav .list li:last-child a {
-    padding-right: 0;
-    border: 0;
+  padding-right: 0;
+  border: 0;
 }
 /*  #endregion顶部导航条end */
 
 /* #region头部start */
 .header {
-    height: 120px;
-    background-color: skyblue;
+  height: 120px;
+  background-color: skyblue;
 }
 .header .search form {
-    margin-top: 42px;
-    font-size: 0;
+  margin-top: 42px;
+  font-size: 0;
 }
 .header .search input {
-    width: 508px;
-    height: 34px;
-    border: 1px solid #DD302D;
+  width: 508px;
+  height: 34px;
+  border: 1px solid #dd302d;
 }
 .header .search button {
-    width: 80px;
-    height: 36px;
-    background-color: #DD302D;
-    vertical-align: top;
-    background-image: url('../images/serch_icon.png');
-    background-repeat: no-repeat;
-    background-position: 28px 6px;
+  width: 80px;
+  height: 36px;
+  background-color: #dd302d;
+  /* input和 button的基线位置不同，input的基线是文字底部，button的是内容底部，且按钮有自己的padding*/
+  /* vertical-align: top;修改为按照行盒顶部对齐 */
+  vertical-align: top;
+  background-image: url("../images/serch_icon.png");
+  background-repeat: no-repeat;
+  background-position: 28px 6px;
+  /* background-position: center; */
 }
 /* #endregion头部end */
-
-
