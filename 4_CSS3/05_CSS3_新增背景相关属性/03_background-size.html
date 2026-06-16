@@ -1,25 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>03_background-size</title>
     <style>
-        div {
-            width: 400px;
-            height: 400px;
-            padding: 50px;
-            border: 50px dashed rgba(255, 0, 0, 0.7);
-            /* background-image: url('../images/bg03.jpg'); */
-            /* background-repeat: no-repeat; */
+      div {
+        width: 400px;
+        height: 400px;
+        padding: 50px;
+        border: 50px dashed rgba(255, 0, 0, 0.7);
+        background-image: url("../images/bg03.jpg");
+        background-repeat: no-repeat;
 
-            /* background-size: 400px 400px; */
-            /* background-size: 100% 100%; */
-            /* background-size: contain; */
-            background-size: cover;
-        }
+        /* 有可能导致图片变形 */
+        /* background-size: 400px 400px; */
+
+        /* 百分比是相对于背景定位区域，也有可能会导致图片变形 */
+        /* background-size: 100% 100%; */
+
+        /* 
+            保持图片原始宽高比
+            缩放至图片完全显示在容器内（不超出边界）
+            如果容器比例与图片不同，会留白（背景色露出来）
+        */
+        background-size: contain;
+
+        /* 
+            保持图片原始宽高比
+            缩放至图片完全覆盖整个容器
+            如果容器比例与图片不同，会裁切图片边缘
+        */
+        /* background-size: cover; */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div></div>
-</body>
+  </body>
 </html>
