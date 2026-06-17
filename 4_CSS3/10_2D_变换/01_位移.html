@@ -1,49 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>01_位移</title>
     <style>
-        .outer {
-            width: 200px;
-            height: 200px;
-            border: 2px solid black;
-            margin: 0 auto;
-            margin-top: 100px;
-            position: relative;
-        }
-        .inner {
-            width: 200px;
-            height: 200px;
-            background-color: deepskyblue;
-            /* 水平位移 */
-            /* transform: translateX(50px); */
+      .outer {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 100px;
+        position: relative;
+      }
+      .inner {
+        width: 100px;
+        height: 100px;
+        background-color: deepskyblue;
 
-            /* 垂直位移 */
-            /* transform: translateY(50px); */
+        /* 这里的百分比是相对于自己的宽度，与相对定位的百分比不同，相对定位的百分比是相对于父元素 */
+        /* transform: translateX(50%); */
 
-            /* 水平+垂直位移 */
-            /* transform: translate(50px,50px); */
-        }
+        /* 水平位移 */
+        /* transform: translateX(50px); */
 
-        .inner2 {
-            width: 60px;
-            height: 60px;
-            background-color: orange;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
+        /* 垂直位移 */
+        /* transform: translateY(50px); */
+
+        /* 水平+垂直位移 */
+        /* transform: translate(50px,50px); */
+      }
+
+      .inner2 {
+        width: 60px;
+        height: 60px;
+        background-color: orange;
+        position: absolute;
+        /* 实现水平和垂直居中 */
+        top: 50%;
+        left: 50%;
+        /* 位移中的百分比是参考的自身 */
+        transform: translate(-50%, -50%);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="outer">
-        <div class="inner">你好啊</div>
+      <div class="inner">你好啊</div>
     </div>
 
     <div class="outer">
-        <div class="inner2">你好啊</div>
+      <div class="inner2">你好啊</div>
     </div>
-</body>
+  </body>
 </html>
