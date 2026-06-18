@@ -1,28 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>03_过渡复合属性</title>
     <style>
-        .outer {
-            width: 1000px;
-            height: 100px;
-            border: 1px solid black;
-        }
-        .inner {
-            width: 100px;
-            height: 100px;
-            background-color: orange;
-            transition:linear all 3s 0.5s ;
-        }
-        .outer:hover .inner {
-            width: 1000px;
-        }
+      .outer {
+        width: 1000px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .inner {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        /* duration delay */
+        transition: linear all 3s 0.5s;
+      }
+      .outer:hover .inner {
+        width: 1000px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="outer">
-        <div class="inner"></div>
+      <div class="inner"></div>
     </div>
-</body>
+  </body>
 </html>

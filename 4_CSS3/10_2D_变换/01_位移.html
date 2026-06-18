@@ -18,7 +18,7 @@
         background-color: deepskyblue;
 
         /* 这里的百分比是相对于自己的宽度，与相对定位的百分比不同，相对定位的百分比是相对于父元素 */
-        /* transform: translateX(50%); */
+        transform: translateX(50%);
 
         /* 水平位移 */
         /* transform: translateX(50px); */
@@ -35,10 +35,10 @@
         height: 60px;
         background-color: orange;
         position: absolute;
-        /* 实现水平和垂直居中 */
+        /* 实现水平和垂直居中，这里定位的50%是相对于父元素*/
         top: 50%;
         left: 50%;
-        /* 位移中的百分比是参考的自身 */
+        /* 位移中的百分比是参考的自身，这里是相对于自身 */
         transform: translate(-50%, -50%);
       }
     </style>
