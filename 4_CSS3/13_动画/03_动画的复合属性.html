@@ -1,40 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>03_动画的复合属性</title>
     <style>
-        .outer {
-            width: 1000px;
-            height: 100px;
-            border: 1px solid black;
+      .outer {
+        width: 1000px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      @keyframes atguigu {
+        from {
         }
-        @keyframes atguigu {
-            from {
-                
-            }
-            to {
-                transform: translate(900px) rotate(360deg);
-                background-color: purple;
-                border-radius: 50%;
-            }
+        to {
+          transform: translate(900px) rotate(360deg);
+          background-color: purple;
+          border-radius: 50%;
         }
-        .inner {
-            width: 100px;
-            height: 100px;
-            background-color: deepskyblue;
-            animation: forwards 3s 0.5s alternate-reverse linear 2 atguigu;
-        }
-        .outer:hover .inner {
-            /* 动画的播放状态 */
-            animation-play-state: paused;
-        }
-        
+      }
+      .inner {
+        width: 100px;
+        height: 100px;
+        background-color: deepskyblue;
+        /* animation-fill-mode：forwards动画结束后停留在最后一帧，持续时间，延迟，先反向运行再正向运行，线性，2次，动画名 */
+        /* animation: forwards 3s 0.5s alternate-reverse linear 2 atguigu; */
+        /* 这是推荐的书写的顺序 */
+        animation: atguigu 3s linear 0.5s 2 alternate-reverse forwards;
+      }
+      .outer:hover .inner {
+        /* 动画的播放状态 */
+        animation-play-state: paused;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="outer">
-        <div class="inner"></div>
+      <div class="inner"></div>
     </div>
-</body>
+  </body>
 </html>
